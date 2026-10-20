@@ -15,6 +15,7 @@ Bản snapshot này lưu lại toàn bộ trạng thái hoàn chỉnh, ổn đ�
 | **Bloatware & Telemetry** | **35 gói rác & theo dõi đã tắt** (Samba TV, Sony telemetry, Eco Dashboard, Timers, Sony Album/Music, Living Decor, Vewd...) |
 | **Trợ lý Google (Mic remote)** | **Hoạt động hoàn hảo** (LauncherX chạy ngầm hỗ trợ session, HomeKeyService chuyển hướng phím Home mượt mà) |
 | **DNS chặn quảng cáo** | **AdGuard Private DNS** (`dns.adguard-dns.com` ở chế độ opportunistic) |
+| **Chặn quảng cáo FPT Play** | **personalDNSfilter** v1.50.61.5 chạy ngầm cục bộ (`tun0`), chặn sạch banner khởi động và pre-roll video ads |
 
 ---
 
@@ -73,3 +74,26 @@ Nếu bạn muốn huỷ bỏ mọi tuỳ biến và quay lại giao diện gố
 cd /Users/khanhkd1/.gemini/antigravity/scratch/cleanyourtv
 ./backup/sony-kd-65x80l/restore.sh
 ```
+
+---
+
+## 6. Quản Lý Bộ Lọc Chặn Quảng Cáo FPT Play (personalDNSfilter)
+
+personalDNSfilter hoạt động như một VPN cục bộ cực nhẹ (~25MB RAM, 0% CPU lúc nghỉ) trên TV để lọc DNS và sinkhole các tên miền quảng cáo (`d.adsplay.net`, `ads-cdn.fptplay.net`, `log.adsplay.net`,...). Khi FPT Play gọi quảng cáo đầu video, do không kết nối được tới server quảng cáo, ExoPlayer lập tức bỏ qua và phát video ngay lập tức mà không phải chờ 15–30s.
+
+Để kiểm tra hoặc quản lý personalDNSfilter từ máy tính:
+
+```bash
+cd /Users/khanhkd1/.gemini/antigravity/scratch/cleanyourtv
+
+# Kiểm tra trạng thái và interface tun0
+./tools/manage_dnsfilter.sh status
+
+# Kiểm tra độ phân giải tên miền quảng cáo vs tên miền thường
+./tools/manage_dnsfilter.sh test
+
+# Khởi động lại hoặc cập nhật bộ quy tắc mới
+./tools/manage_dnsfilter.sh restart
+./tools/manage_dnsfilter.sh push-rules
+```
+

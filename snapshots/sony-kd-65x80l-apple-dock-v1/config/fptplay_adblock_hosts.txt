@@ -1,0 +1,12 @@
+# FPT Play & OTT In-Stream AdBlock Rules
+# Used by personalDNSfilter at /sdcard/Android/data/dnsfilter.android/files/PersonalDNSFilter/additionalHosts.txt
+
+# --- FPT Play and OTT Ads ---
+adsplay.net
+*.adsplay.net
+d.adsplay.net
+log.adsplay.net
+ads-cdn.fptplay.net
+*.fads.vn
+*.ads.tremorhub.com
+*.imrworldwide.com

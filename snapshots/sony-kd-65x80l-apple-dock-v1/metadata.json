@@ -50,5 +50,18 @@
     "private_dns_mode": "opportunistic",
     "private_dns_specifier": "dns.adguard-dns.com"
   },
+  "local_dns_adblock": {
+    "engine": "personalDNSfilter",
+    "package": "dnsfilter.android",
+    "version": "1.50.61.5",
+    "status": "Active (tun0)",
+    "autostart": true,
+    "memory_usage_pss": "~25MB",
+    "fptplay_adblock": {
+      "pre_roll_ads": "Blocked (ExoPlayer bypasses on CONFIG_FETCH_FAILED)",
+      "startup_banner_ads": "Blocked",
+      "rules_file": "snapshots/sony-kd-65x80l-apple-dock-v1/config/fptplay_adblock_hosts.txt"
+    }
+  },
   "debloated_packages_count": 35
 }
