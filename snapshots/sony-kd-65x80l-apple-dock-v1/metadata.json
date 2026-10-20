@@ -1,0 +1,54 @@
+{
+  "snapshot_name": "sony-kd-65x80l-apple-dock-v1",
+  "created_at": "2026-10-20T23:55:00+07:00",
+  "target_device": {
+    "model": "KD-65X80L",
+    "product": "BRAVIA_VH22",
+    "manufacturer": "Sony",
+    "android_version": "12",
+    "api_level": 31,
+    "abi": "armeabi-v7a",
+    "ip_address": "192.168.1.192",
+    "adb_port": 5555
+  },
+  "launcher_configuration": {
+    "package": "com.gathin.tvhome",
+    "name": "CleanYourTV (Apple TV Style)",
+    "version": "2.3",
+    "dock_apps": [
+      {
+        "position": 1,
+        "name": "FPT Play",
+        "package": "net.fptplay.ottbox"
+      },
+      {
+        "position": 2,
+        "name": "SmartTube",
+        "package": "org.smarttube.stable",
+        "version": "32.56"
+      },
+      {
+        "position": 3,
+        "name": "Phim4K",
+        "package": "com.oxootv.spagreen"
+      },
+      {
+        "position": 4,
+        "name": "Apple TV",
+        "package": "com.apple.atve.sony.appletv"
+      }
+    ],
+    "accessibility_service": "com.gathin.tvhome/.HomeKeyService",
+    "home_handling": "HomeKeyService intercepting KEYCODE_HOME and KEYCODE_TV, keeping LauncherX alive in background for Google Assistant"
+  },
+  "voice_assistant": {
+    "status": "Working",
+    "service": "Google Assistant (com.google.android.katniss)",
+    "account_mode": "Full Access (Apps-only mode disabled)"
+  },
+  "network": {
+    "private_dns_mode": "opportunistic",
+    "private_dns_specifier": "dns.adguard-dns.com"
+  },
+  "debloated_packages_count": 35
+}

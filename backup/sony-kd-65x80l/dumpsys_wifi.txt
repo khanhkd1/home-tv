@@ -1,0 +1,905 @@
+Verbose logging is off
+Stay-awake conditions: 0
+mInIdleMode false
+mScanPending false
+SettingsStore:
+WifiState 0
+AirplaneModeOn false
+ScanAlwaysAvailable true
+WifiScoringState true
+Dump of WifiActiveModeWarden
+Current wifi mode: EnabledState
+NumActiveModeManagers: 1
+WifiController:
+ total records=0
+curState=EnabledState
+Dump of ClientModeManager id=19191
+current StateMachine mode: ScanOnlyModeState
+mRole: ROLE_CLIENT_SCAN_ONLY
+mTargetRoleChangeInfo: Role: ROLE_CLIENT_SCAN_ONLY, RequestorWs: WorkSource{1010}, ModeListener: com.android.server.wifi.ActiveModeWarden$ClientListener@7e123e7
+mClientInterfaceName: wlan0
+mIfaceIsUp: true
+WifiClientModeManager:
+ total records=2
+ rec[0]: time=10-20 10:14:27.486 processed=IdleState org=IdleState dest=ScanOnlyModeState what=0(0x0)
+ rec[1]: time=10-20 10:14:42.966 processed=IdleState org=ScanOnlyModeState dest=<null> what=7(0x7)
+curState=ScanOnlyModeState
+
+Wi-Fi is disabled
+No active ClientModeImpl instance
+Dump of ConcreteClientModeManager.Graveyard
+Stopped ClientModeImpls: 0 total
+
+
+Dump of ActiveModeWarden.Graveyard
+Stopped ClientModeManagers: 0 total
+Stopped SoftApManagers: 0 total
+
+STA + STA Concurrency Supported: false
+STA + AP Concurrency Supported: true
+Dump of HalDeviceManager:
+  mServiceManager: android.hidl.manager@1.2::IServiceManager@Proxy
+  mWifi: android.hardware.wifi@1.5::IWifi@Proxy
+  mManagerStatusListeners: [com.android.server.wifi.HalDeviceManager$ManagerStatusListenerProxy@81bded2]
+  mInterfaceInfoCache: {Pair{wlan0 0}={name=wlan0, type=0, destroyedListeners.size()=1, RequestorWs=WorkSource{1010}, creationTime=19500}}
+  mDebugChipsInfo: [{chipId=0, availableModes=[{.id = 3, .availableCombinations = [{.limits = [{.types = [0], .maxIfaces = 1}, {.types = [1], .maxIfaces = 1}]}, {.limits = [{.types = [0], .maxIfaces = 1}, {.types = [2], .maxIfaces = 1}]}]}], currentModeIdValid=true, currentModeId=3, chipCapabilities=224, ifaces[1].length=0, ifaces[0].length=1, ifaces[2].length=0, ifaces[3].length=0}]
+Dump of MakeBeforeBreakManager
+mMakeBeforeBreakInfo=null
+
+mTxPkts 0
+mRxPkts 0
+mLastActivity -1
+mRegisteredCallbacks 0
+
+Locks held:
+Locks acquired: 4 full high perf, 0 full low latency
+Locks released: 4 full high perf, 0 full low latency
+
+Locks held:
+    WifiLock{com.google.cast.receiver.WifiLockManager type=1 uid=1000 workSource=WorkSource{10153}}
+
+mMulticastEnabled 7
+mMulticastDisabled 3
+Multicast Locks held:
+    Multicaster{com.google.cast.receiver.WifiLockManager uid=10153}
+    Multicaster{UpnpServiceCp uid=10083}
+    Multicaster{fliing_lock uid=10128}
+    Multicaster{DlnaDmrService uid=10083}
+
+WifiScoreCard:
+
+WifiMetrics:
+mConnectionEvents:
+mWifiLogProto.numSavedNetworks=0
+mWifiLogProto.numSavedNetworksWithMacRandomization=0
+mWifiLogProto.numOpenNetworks=0
+mWifiLogProto.numLegacyPersonalNetworks=0
+mWifiLogProto.numLegacyEnterpriseNetworks=0
+mWifiLogProto.numEnhancedOpenNetworks=0
+mWifiLogProto.numWpa3PersonalNetworks=0
+mWifiLogProto.numWpa3EnterpriseNetworks=0
+mWifiLogProto.numWapiPersonalNetworks=0
+mWifiLogProto.numWapiEnterpriseNetworks=0
+mWifiLogProto.numHiddenNetworks=0
+mWifiLogProto.numPasspointNetworks=0
+mWifiLogProto.isLocationEnabled=false
+mWifiLogProto.isScanningAlwaysEnabled=true
+mWifiLogProto.isVerboseLoggingEnabled=false
+mWifiLogProto.isEnhancedMacRandomizationForceEnabled=false
+mWifiLogProto.isWifiWakeEnabled=false
+mWifiLogProto.numNetworksAddedByUser=0
+mWifiLogProto.numNetworksAddedByApps=0
+mWifiLogProto.numNonEmptyScanResults=6
+mWifiLogProto.numEmptyScanResults=0
+mWifiLogProto.numConnecitvityOneshotScans=0
+mWifiLogProto.numOneshotScans=6
+mWifiLogProto.numOneshotHasDfsChannelScans=0
+mWifiLogProto.numBackgroundScans=0
+mWifiLogProto.numExternalAppOneshotScanRequests=0
+mWifiLogProto.numExternalForegroundAppOneshotScanRequestsThrottled=0
+mWifiLogProto.numExternalBackgroundAppOneshotScanRequestsThrottled=0
+mWifiLogProto.meteredNetworkStatsSaved=
+num_metered: 0
+num_override_metered: 0
+num_override_unmetered: 0
+num_unmetered: 0
+
+mWifiLogProto.meteredNetworkStatsSuggestion=
+num_metered: 0
+num_override_metered: 0
+num_override_unmetered: 0
+num_unmetered: 0
+
+mScanReturnEntries:
+  SCAN_UNKNOWN: 0
+  SCAN_SUCCESS: 6
+  SCAN_FAILURE_INTERRUPTED: 0
+  SCAN_FAILURE_INVALID_CONFIGURATION: 0
+  FAILURE_WIFI_DISABLED: 0
+mSystemStateEntries: <state><screenOn> : <scansInitiated>
+  WIFI_UNKNOWN       ON: 0
+  WIFI_DISABLED      ON: 1
+  WIFI_DISCONNECTED  ON: 0
+  WIFI_ASSOCIATED    ON: 0
+  WIFI_UNKNOWN      OFF: 0
+  WIFI_DISABLED     OFF: 5
+  WIFI_DISCONNECTED OFF: 0
+  WIFI_ASSOCIATED   OFF: 0
+mWifiLogProto.numConnectivityWatchdogPnoGood=0
+mWifiLogProto.numConnectivityWatchdogPnoBad=0
+mWifiLogProto.numConnectivityWatchdogBackgroundGood=0
+mWifiLogProto.numConnectivityWatchdogBackgroundBad=0
+mWifiLogProto.numLastResortWatchdogTriggers=0
+mWifiLogProto.numLastResortWatchdogBadAssociationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadAuthenticationNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadDhcpNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogBadOtherNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogAvailableNetworksTotal=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAssociation=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadAuthentication=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadDhcp=0
+mWifiLogProto.numLastResortWatchdogTriggersWithBadOther=0
+mWifiLogProto.numLastResortWatchdogSuccesses=0
+mWifiLogProto.watchdogTotalConnectionFailureCountAfterTrigger=0
+mWifiLogProto.watchdogTriggerToConnectionSuccessDurationMs=-1
+mWifiLogProto.recordDurationSec=22197
+mWifiLogProto.rssiPollCount: {}
+mWifiLogProto.rssiPollDeltaCount: Printing counts for [-127, 127]
+  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.linkSpeedCounts: 
+mWifiLogProto.alertReasonCounts=()
+mWifiLogProto.numTotalScanResults=0
+mWifiLogProto.numOpenNetworkScanResults=0
+mWifiLogProto.numLegacyPersonalNetworkScanResults=0
+mWifiLogProto.numLegacyEnterpriseNetworkScanResults=0
+mWifiLogProto.numEnhancedOpenNetworkScanResults=0
+mWifiLogProto.numWpa3PersonalNetworkScanResults=0
+mWifiLogProto.numWpa3EnterpriseNetworkScanResults=0
+mWifiLogProto.numWapiPersonalNetworkScanResults=0
+mWifiLogProto.numWapiEnterpriseNetworkScanResults=0
+mWifiLogProto.numHiddenNetworkScanResults=0
+mWifiLogProto.numHotspot2R1NetworkScanResults=0
+mWifiLogProto.numHotspot2R2NetworkScanResults=0
+mWifiLogProto.numHotspot2R3NetworkScanResults=0
+mWifiLogProto.numMboSupportedNetworkScanResults=0
+mWifiLogProto.numMboCellularDataAwareNetworkScanResults=0
+mWifiLogProto.numOceSupportedNetworkScanResults=0
+mWifiLogProto.numFilsSupportedNetworkScanResults=0
+mWifiLogProto.num11AxNetworkScanResults=0
+mWifiLogProto.num6GNetworkScanResults0
+mWifiLogProto.num6GPscNetworkScanResults0
+mWifiLogProto.numBssidFilteredDueToMboAssocDisallowInd=0
+mWifiLogProto.numConnectToNetworkSupportingMbo=0
+mWifiLogProto.numConnectToNetworkSupportingOce=0
+mWifiLogProto.numSteeringRequest=0
+mWifiLogProto.numForceScanDueToSteeringRequest=0
+mWifiLogProto.numMboCellularSwitchRequest=0
+mWifiLogProto.numSteeringRequestIncludingMboAssocRetryDelay=0
+mWifiLogProto.numConnectRequestWithFilsAkm=0
+mWifiLogProto.numL2ConnectionThroughFilsAuthentication=0
+mWifiLogProto.recentFailureAssociationStatus={}
+mWifiLogProto.numScans=0
+mWifiLogProto.WifiScoreCount: [0, 60]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.WifiUsabilityScoreCount: [0, 100]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+mWifiLogProto.SoftApManagerReturnCodeCounts:
+  SUCCESS: 0
+  FAILED_GENERAL_ERROR: 0
+  FAILED_NO_CHANNEL: 0
+  FAILED_UNSUPPORTED_CONFIGURATION: 0
+
+mWifiLogProto.numHalCrashes=0
+mWifiLogProto.numWificondCrashes=0
+mWifiLogProto.numSupplicantCrashes=0
+mWifiLogProto.numHostapdCrashes=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToHal=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToWificond=0
+mWifiLogProto.numSetupClientInterfaceFailureDueToSupplicant=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToHal=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToWificond=0
+mWifiLogProto.numSetupSoftApInterfaceFailureDueToHostapd=0
+StaEventList:
+UserActionEvents:
+mWifiLogProto.numPasspointProviders=0
+mWifiLogProto.numPasspointProviderInstallation=0
+mWifiLogProto.numPasspointProviderInstallSuccess=0
+mWifiLogProto.numPasspointProviderUninstallation=0
+mWifiLogProto.numPasspointProviderUninstallSuccess=0
+mWifiLogProto.numPasspointProvidersSuccessfullyConnected=0
+mWifiLogProto.installedPasspointProfileTypeForR1:{}
+mWifiLogProto.installedPasspointProfileTypeForR2:{}
+mWifiLogProto.passpointProvisionStats.numProvisionSuccess=0
+mWifiLogProto.passpointProvisionStats.provisionFailureCount:{}
+mWifiLogProto.totalNumberOfPasspointConnectionsWithVenueUrl=0
+mWifiLogProto.totalNumberOfPasspointConnectionsWithTermsAndConditionsUrl=0
+mWifiLogProto.totalNumberOfPasspointAcceptanceOfTermsAndConditions=0
+mWifiLogProto.totalNumberOfPasspointProfilesWithDecoratedIdentity=0
+mWifiLogProto.passpointDeauthImminentScope={}
+mWifiLogProto.numRadioModeChangeToMcc=0
+mWifiLogProto.numRadioModeChangeToScc=0
+mWifiLogProto.numRadioModeChangeToSbs=0
+mWifiLogProto.numRadioModeChangeToDbs=0
+mWifiLogProto.numSoftApUserBandPreferenceUnsatisfied=0
+mTotalSsidsInScanHistogram:{}
+mTotalBssidsInScanHistogram:{}
+mAvailableOpenSsidsInScanHistogram:{}
+mAvailableOpenBssidsInScanHistogram:{}
+mAvailableSavedSsidsInScanHistogram:{}
+mAvailableSavedBssidsInScanHistogram:{}
+mAvailableOpenOrSavedSsidsInScanHistogram:{}
+mAvailableOpenOrSavedBssidsInScanHistogram:{}
+mAvailableSavedPasspointProviderProfilesInScanHistogram:{}
+mAvailableSavedPasspointProviderBssidsInScanHistogram:{}
+mWifiLogProto.partialAllSingleScanListenerResults=0
+mWifiLogProto.fullBandAllSingleScanListenerResults=0
+mWifiAwareMetrics:
+mLastEnableUsageMs:0
+mLastEnableUsageInThisSampleWindowMs:0
+mAvailableTimeMs:0
+mHistogramAwareAvailableDurationMs:
+mLastEnableAwareMs:0
+mLastEnableAwareInThisSampleWindowMs:0
+mEnabledTimeMs:0
+mHistogramAwareEnabledDurationMs:
+mAttachDataByUid:
+mAttachStatusData:
+mHistogramAttachDuration:
+mMaxPublishInApp:0
+mMaxSubscribeInApp:0
+mMaxDiscoveryInApp:0
+mMaxPublishInSystem:0
+mMaxSubscribeInSystem:0
+mMaxDiscoveryInSystem:0
+mPublishStatusData:
+mSubscribeStatusData:
+mHistogramPublishDuration:
+mHistogramSubscribeDuration:
+mAppsWithDiscoverySessionResourceFailure:
+mMaxPublishWithRangingInApp:0
+mMaxSubscribeWithRangingInApp:0
+mMaxPublishWithRangingInSystem:0
+mMaxSubscribeWithRangingInSystem:0
+mHistogramSubscribeGeofenceMin:
+mHistogramSubscribeGeofenceMax:
+mNumSubscribesWithRanging:0
+mNumMatchesWithRanging:0
+mNumMatchesWithoutRangingForRangingEnabledSubscribes:0
+mMaxNdiInApp:0
+mMaxNdpInApp:0
+mMaxSecureNdpInApp:0
+mMaxNdiInSystem:0
+mMaxNdpInSystem:0
+mMaxSecureNdpInSystem:0
+mMaxNdpPerNdi:0
+mInBandNdpStatusData:
+mOutOfBandNdpStatusData:
+mNdpCreationTimeDuration:
+mNdpCreationTimeMin:-1
+mNdpCreationTimeMax:0
+mNdpCreationTimeSum:0
+mNdpCreationTimeSumSq:0
+mNdpCreationTimeNumSamples:0
+mHistogramNdpDuration:
+mNdpRequestType:
+mRttMetrics:
+RTT Metrics:
+mNumStartRangingCalls:0
+mOverallStatusHistogram:{}
+mMeasurementDurationApOnlyHistogram{}
+mMeasurementDurationWithAwareHistogram{}
+AP:numCalls=0, numIndividualCalls=0, perUidInfo={}, numRequestsHistogram={}, requestGapHistogram={}, statusHistogram={}, measuredDistanceHistogram={}
+AWARE:numCalls=0, numIndividualCalls=0, perUidInfo={}, numRequestsHistogram={}, requestGapHistogram={}, statusHistogram={}, measuredDistanceHistogram={}
+mPnoScanMetrics.numPnoScanAttempts=0
+mPnoScanMetrics.numPnoScanFailed=0
+mPnoScanMetrics.numPnoScanStartedOverOffload=0
+mPnoScanMetrics.numPnoScanFailedOverOffload=0
+mPnoScanMetrics.numPnoFoundNetworkEvents=0
+mWifiLinkLayerUsageStats.loggingDurationMs=0
+mWifiLinkLayerUsageStats.radioOnTimeMs=0
+mWifiLinkLayerUsageStats.radioTxTimeMs=0
+mWifiLinkLayerUsageStats.radioRxTimeMs=0
+mWifiLinkLayerUsageStats.radioScanTimeMs=0
+mWifiLinkLayerUsageStats.radioNanScanTimeMs=0
+mWifiLinkLayerUsageStats.radioBackgroundScanTimeMs=0
+mWifiLinkLayerUsageStats.radioRoamScanTimeMs=0
+mWifiLinkLayerUsageStats.radioPnoScanTimeMs=0
+mWifiLinkLayerUsageStats.radioHs20ScanTimeMs=0
+mWifiLinkLayerUsageStats per Radio Stats: 
+mWifiLogProto.connectToNetworkNotificationCount={}
+mWifiLogProto.connectToNetworkNotificationActionCount={}
+mWifiLogProto.openNetworkRecommenderBlocklistSize=0
+mWifiLogProto.isWifiNetworksAvailableNotificationOn=true
+mWifiLogProto.numOpenNetworkRecommendationUpdates=0
+mWifiLogProto.numOpenNetworkConnectMessageFailedToSend=0
+mWifiLogProto.observedHotspotR1ApInScanHistogram={}
+mWifiLogProto.observedHotspotR2ApInScanHistogram={}
+mWifiLogProto.observedHotspotR3ApInScanHistogram={}
+mWifiLogProto.observedHotspotR1EssInScanHistogram={}
+mWifiLogProto.observedHotspotR2EssInScanHistogram={}
+mWifiLogProto.observedHotspotR3EssInScanHistogram={}
+mWifiLogProto.observedHotspotR1ApsPerEssInScanHistogram={}
+mWifiLogProto.observedHotspotR2ApsPerEssInScanHistogram={}
+mWifiLogProto.observedHotspotR3ApsPerEssInScanHistogram={}
+mWifiLogProto.observed80211mcSupportingApsInScanHistogram{}
+mWifiLogProto.bssidBlocklistStats:
+networkSelectionFilteredBssidCount={}
+mBlockedBssidPerReasonCount={}
+mBlockedConfigurationPerReasonCount={}, highMovementMultipleScansFeatureEnabled=true, numHighMovementConnectionSkipped=0, numHighMovementConnectionStarted=0, mBlockedBssidPerReasonCount={}, mBlockedConfigurationPerReasonCount={}
+mSoftApTetheredEvents:
+mSoftApLocalOnlyEvents:
+Wifi power metrics:
+Logging duration (time on battery): 0
+Energy consumed by wifi (mAh): 0.0
+Amount of time wifi is in idle (ms): 0
+Amount of time wifi is in rx (ms): 0
+Amount of time wifi is in tx (ms): 0
+Amount of time kernel is active because of wifi data (ms): 0
+Amount of time wifi is in sleep (ms): 0
+Amount of time wifi is scanning (ms): 0
+Number of packets sent (tx): 0
+Number of bytes sent (tx): 0
+Number of packets received (rx): 0
+Number of bytes sent (rx): 0
+Energy consumed across measured wifi rails (mAh): 0
+Wifi radio usage metrics:
+Logging duration (time on battery): 0
+Amount of time wifi is in scan mode while on battery (ms): 0
+-------WifiWake metrics-------
+mTotalSessions: 0
+mTotalWakeups: 0
+mIgnoredStarts: 0
+mIsInSession: false
+Stored Sessions: 0
+----end of WifiWake metrics----
+mWifiLogProto.isMacRandomizationOn=false
+mWifiLogProto.scoreExperimentId=
+mExperimentValues.wifiIsUnusableLoggingEnabled=true
+mExperimentValues.wifiDataStallMinTxBad=1
+mExperimentValues.wifiDataStallMinTxSuccessWithoutRx=50
+mExperimentValues.linkSpeedCountsLoggingEnabled=true
+mExperimentValues.dataStallDurationMs=1500
+mExperimentValues.dataStallTxTputThrKbps=2000
+mExperimentValues.dataStallRxTputThrKbps=2000
+mExperimentValues.dataStallTxPerThr=90
+mExperimentValues.dataStallCcaLevelThr=256
+WifiIsUnusableEventList: 
+Hardware Version: 
+mWifiUsabilityStatsEntriesList:
+mWifiUsabilityStatsList:
+mMobilityStatePnoStatsMap:
+device_mobility_state=0,num_times_entered_state=1,total_duration_ms=0,pno_duration_ms=0
+WifiP2pMetrics:
+mConnectionEvents:
+mGroupEvents:
+mWifiP2pStatsProto.numPersistentGroup=0
+mWifiP2pStatsProto.numTotalPeerScans=0
+mWifiP2pStatsProto.numTotalServiceScans=0
+mDppMetrics:
+---Easy Connect/DPP metrics---
+mWifiDppLogProto.numDppConfiguratorInitiatorRequests=0
+mWifiDppLogProto.numDppEnrolleeInitiatorRequests=0
+mWifiDppLogProto.numDppEnrolleeResponderRequests=0
+mWifiDppLogProto.numDppEnrolleeResponderSuccess=0
+mWifiDppLogProto.numDppEnrolleeSuccess=0
+mWifiDppLogProto.numDppR1CapableEnrolleeResponderDevices=0
+mWifiDppLogProto.numDppR2CapableEnrolleeResponderDevices=0
+mWifiDppLogProto.numDppR2EnrolleeResponderIncompatibleConfiguration=0
+---End of Easy Connect/DPP metrics---
+mWifiConfigStoreReadDurationHistogram:{0=2}
+mWifiConfigStoreWriteDurationHistogram:{1=1}
+mLinkProbeSuccessRssiCounts:{}
+mLinkProbeFailureRssiCounts:{}
+mLinkProbeSuccessLinkSpeedCounts:{}
+mLinkProbeFailureLinkSpeedCounts:{}
+mLinkProbeSuccessSecondsSinceLastTxSuccessHistogram:{}
+mLinkProbeFailureSecondsSinceLastTxSuccessHistogram:{}
+mLinkProbeSuccessElapsedTimeMsHistogram:{}
+mLinkProbeFailureReasonCounts:{}
+mLinkProbeExperimentProbeCounts:{}
+mNetworkSelectionExperimentPairNumChoicesCounts:{}
+mLinkProbeStaEventCount:0
+mWifiNetworkRequestApiLog:
+num_apps: 0
+num_concurrent_connection: 0
+num_connect_on_primary_iface: 0
+num_connect_on_secondary_iface: 0
+num_connect_success_on_primary_iface: 0
+num_connect_success_on_secondary_iface: 0
+num_request: 0
+num_user_approval_bypass: 0
+num_user_reject: 0
+
+mWifiNetworkRequestApiMatchSizeHistogram:
+{}
+mWifiNetworkRequestApiConnectionDurationSecOnPrimaryIfaceHistogram:
+{}
+mWifiNetworkRequestApiConnectionDurationSecOnSecondaryIfaceHistogram:
+{}
+mWifiNetworkRequestApiConcurrentConnectionDurationSecHistogram:
+{}
+mWifiNetworkSuggestionApiLog:
+num_connect_failure: 0
+num_connect_success: 0
+num_modification: 0
+num_multiple_suggestions: 0
+num_priority_groups: 0
+num_saved_networks_with_configured_suggestion: 0
+user_revoke_app_suggestion_permission: 0
+
+mWifiNetworkSuggestionApiMatchSizeHistogram:
+{}
+mWifiNetworkSuggestionApiAppTypeCounter:
+{}
+mWifiNetworkSuggestionPriorityGroups:
+{}
+mWifiNetworkSuggestionCoexistSavedNetworks:
+{}
+mUserApprovalSuggestionAppUiUserReaction:
+mUserApprovalCarrierUiUserReaction:
+mNetworkIdToNominatorId:
+{}
+mWifiLockStats:
+high_perf_active_time_ms: 0
+low_latency_active_time_ms: 0
+
+mWifiLockHighPerfAcqDurationSecHistogram:
+{[Integer.MIN_VALUE,1)=3, [1,10)=1}
+mWifiLockLowLatencyAcqDurationSecHistogram:
+{}
+mWifiLockHighPerfActiveSessionDurationSecHistogram:
+{}
+mWifiLockLowLatencyActiveSessionDurationSecHistogram:
+{}
+mWifiToggleStats:
+num_toggle_off_normal: 0
+num_toggle_off_privileged: 0
+num_toggle_on_normal: 0
+num_toggle_on_privileged: 0
+
+mWifiLogProto.numAddOrUpdateNetworkCalls=0
+mWifiLogProto.numEnableNetworkCalls=0
+mWifiLogProto.txLinkSpeedCount2g={}
+mWifiLogProto.txLinkSpeedCount5gLow={}
+mWifiLogProto.txLinkSpeedCount5gMid={}
+mWifiLogProto.txLinkSpeedCount5gHigh={}
+mWifiLogProto.txLinkSpeedCount6gLow={}
+mWifiLogProto.txLinkSpeedCount6gMid={}
+mWifiLogProto.txLinkSpeedCount6gHigh={}
+mWifiLogProto.rxLinkSpeedCount2g={}
+mWifiLogProto.rxLinkSpeedCount5gLow={}
+mWifiLogProto.rxLinkSpeedCount5gMid={}
+mWifiLogProto.rxLinkSpeedCount5gHigh={}
+mWifiLogProto.rxLinkSpeedCount6gLow={}
+mWifiLogProto.rxLinkSpeedCount6gMid={}
+mWifiLogProto.rxLinkSpeedCount6gHigh={}
+mWifiLogProto.numIpRenewalFailure=0
+mWifiLogProto.connectionDurationStats=connectionDurationSufficientThroughputMs=0, connectionDurationInSufficientThroughputMs=0, connectionDurationInSufficientThroughputDefaultWifiMs=0, connectionDurationCellularDataOffMs=0
+mWifiLogProto.isExternalWifiScorerOn=false
+mWifiLogProto.wifiOffMetrics=numWifiOff=0, numWifiOffDeferring=0, numWifiOffDeferringTimeout=0, wifiOffDeferringTimeHistogram={}
+mWifiLogProto.softApConfigLimitationMetrics=numSecurityTypeResetToDefault=0, numMaxClientSettingResetToDefault=0, numClientControlByUserResetToDefault=0, maxClientSettingWhenReachHistogram={}
+mChannelUtilizationHistogram2G:
+{}
+mChannelUtilizationHistogramAbove2G:
+{}
+mTxThroughputMbpsHistogram2G:
+{}
+mRxThroughputMbpsHistogram2G:
+{}
+mTxThroughputMbpsHistogramAbove2G:
+{}
+mRxThroughputMbpsHistogramAbove2G:
+{}
+mCarrierWifiMetrics:
+numConnectionSuccess=0, numConnectionAuthFailure=0, numConnectionNonAuthFailure0
+FirstConnectAfterBootStats{wifiEnabledAtBoot=Attempt{timestampSinceBootMillis=19197,isSuccess=false},firstNetworkSelectionAttempt=null,firstL2ConnectionAttempt=null,firstL3ConnectionAttempt=null}
+WifiToWifiSwitchStats{isMakeBeforeBreakSupported=false,wifiToWifiSwitchTriggerCount=0,makeBeforeBreakTriggerCount=0,makeBeforeBreakNoInternetCount=0,makeBeforeBreakRecoverPrimaryCount=0,makeBeforeBreakInternetValidatedCount=0,makeBeforeBreakSuccessCount=0,makeBeforeBreakLingerCompletedCount=0,makeBeforeBreakLingeringDurationSeconds={}}
+mInitPartialScanTotalCount:
+0
+mInitPartialScanSuccessCount:
+0
+mInitPartialScanFailureCount:
+0
+mInitPartialScanSuccessHistogram:
+{}
+mInitPartialScanFailureHistogram:
+{}
+
+Dump of WifiNetworkSuggestionsManager
+WifiNetworkSuggestionsManager - Networks Begin ----
+WifiNetworkSuggestionsManager - Networks End ----
+
+Dump of WifiBackupRestore
+
+ScoringParams: rssi2=-83:-80:-73:-60,rssi5=-80:-77:-70:-57,rssi6=-80:-77:-70:-57,pps=0:16:100,horizon=15,nud=8,expid=0
+
+WifiNetworkScoreCache (android/1000)
+  All score curves:
+  Network scores for latest ScanResults:
+
+Dump of WifiSettingsConfigStore
+Settings:
+wifi_p2p_pending_factory_reset=false
+wifi_scan_throttle_enabled=true
+wifi_p2p_device_name=null
+wifi_scan_always_enabled=true
+wifi_verbose_logging_enabled=false
+
+mRevertCountryCodeOnCellularLoss: false
+DefaultCountryCode(system property): null
+DefaultCountryCode(config store): null
+mDriverCountryCode: null
+mTelephonyCountryCode: null
+mTelephonyCountryTimestamp: 10-20 10:14:27.500
+mOverrideCountryCode: null
+mDriverCountryTimestamp: null
+mReadyTimestamp: 10-20 10:14:27.494
+isReady: true
+mAmmToReadyForChangeMap: {ConcreteClientModeManager{id=19191 iface=wlan0 role=ROLE_CLIENT_SCAN_ONLY}=true}
+providerId=4, ScoreFilter=Score(60 ; Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0>], requests=0
+WifiNetworkFactory: mGenericConnectionReqCount 0
+WifiNetworkFactory: mActiveSpecificNetworkRequest null
+WifiNetworkFactory: mUserApprovedAccessPointMap {}
+providerId=5, ScoreFilter=Score(2147483647 ; Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0>], requests=48
+  {NetworkRequest [ REQUEST id=26, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10168 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10164 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=32, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10154 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=14, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010169 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=16, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010159 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=38, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=36, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=20, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10181 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10169 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10171 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=18, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010158 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=34, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10119 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.networkstack.inprocess] ], requested=true}
+  {NetworkRequest [ REQUEST id=50, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=53, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=55, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10172 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 10156 RequestorPkg: com.android.systemui] ], requested=true}
+  {NetworkRequest [ REQUEST id=63, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10034 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=71, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=73, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10075 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=75, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10106 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=77, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10148 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=79, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=86, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10153 RequestorUid: 10153 RequestorPkg: com.google.android.apps.mediashell] ], requested=true}
+  {NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 10081 RequestorPkg: com.netflix.ninja] ], requested=true}
+  {NetworkRequest [ REQUEST id=93, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=99, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.sony.dtv.webapi.core] ], requested=true}
+  {NetworkRequest [ REQUEST id=101, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=110, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 10081 RequestorPkg: com.netflix.ninja] ], requested=true}
+  {NetworkRequest [ REQUEST id=113, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10158 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=115, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=120, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10160 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=129, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10209 RequestorUid: 10209 RequestorPkg: com.mediatek.network] ], requested=true}
+  {NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10020 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=142, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10036 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10024 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10127 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=154, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10019 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=163, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10177 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=220, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10070 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=229, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10154 RequestorUid: 10154 RequestorPkg: com.google.android.katniss] ], requested=true}
+UntrustedWifiNetworkFactory: mConnectionReqCount 0
+providerId=6, ScoreFilter=Score(2147483647 ; Policies : 0), Filter=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_ROAMING&NOT_CONGESTED&NOT_SUSPENDED&OEM_PAID&OEM_PRIVATE&NOT_VCN_MANAGED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps Specifier: <android.net.MatchAllNetworkSpecifier@0>], requests=48
+  {NetworkRequest [ REQUEST id=26, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10168 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=28, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10164 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=32, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10154 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=14, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010169 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=16, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010159 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=38, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=36, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=20, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10181 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=24, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10169 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10171 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=18, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1010158 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=34, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10119 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: com.android.networkstack.inprocess] ], requested=true}
+  {NetworkRequest [ REQUEST id=50, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=53, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=55, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10172 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=61, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10156 RequestorUid: 10156 RequestorPkg: com.android.systemui] ], requested=true}
+  {NetworkRequest [ REQUEST id=63, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=65, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=67, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10034 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=69, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=71, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=73, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10075 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=75, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10106 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=77, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10148 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=79, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10159 RequestorUid: 10159 RequestorPkg: com.google.android.apps.tv.launcherx] ], requested=true}
+  {NetworkRequest [ REQUEST id=86, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10153 RequestorUid: 10153 RequestorPkg: com.google.android.apps.mediashell] ], requested=true}
+  {NetworkRequest [ REQUEST id=89, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 10081 RequestorPkg: com.netflix.ninja] ], requested=true}
+  {NetworkRequest [ REQUEST id=93, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=99, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.sony.dtv.webapi.core] ], requested=true}
+  {NetworkRequest [ REQUEST id=101, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=110, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10081 RequestorUid: 10081 RequestorPkg: com.netflix.ninja] ], requested=true}
+  {NetworkRequest [ REQUEST id=113, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10158 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=115, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10150 RequestorUid: 10150 RequestorPkg: com.google.android.gms] ], requested=true}
+  {NetworkRequest [ REQUEST id=120, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10160 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=129, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10209 RequestorUid: 10209 RequestorPkg: com.mediatek.network] ], requested=true}
+  {NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10020 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=142, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10036 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10024 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10127 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=154, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10019 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=163, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10177 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=220, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10070 RequestorUid: 1000 RequestorPkg: android] ], requested=true}
+  {NetworkRequest [ REQUEST id=229, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10154 RequestorUid: 10154 RequestorPkg: com.google.android.katniss] ], requested=true}
+OemPaidWifiNetworkFactory: mOemPaidConnectionReqCount 0
+OemPaidWifiNetworkFactory: mOemPrivateConnectionReqCount 0
+Wlan Wake Reasons: totalCmdEventWake 0 totalDriverFwLocalWake 0 totalRxDataWake 0 rxUnicast 0 rxMulticast 0 rxBroadcast 0 icmp 0 icmp6 0 icmp6Ra 0 icmp6Na 0 icmp6Ns 0 ipv4RxMulticast 0 ipv6Multicast 0 otherRxMulticast 0
+
+Dump of WifiConfigManager
+WifiConfigManager - Log Begin ----
+2026-10-20T10:14:27.113 - clearInternalData: Clearing all internal data
+WifiConfigManager - Log End ----
+WifiConfigManager - Configured networks Begin ----
+WifiConfigManager - Configured networks End ----
+WifiConfigManager - ConfigurationMap Begin ----
+mPerId={}
+mPerIDForCurrentUser={}
+mScanResultMatchInfoMapForCurrentUser={}
+mCurrentUserId=0
+WifiConfigManager - ConfigurationMap End ----
+WifiConfigManager - Next network ID to be allocated 0
+WifiConfigManager - Last selected network ID -1
+WifiConfigManager - PNO scan frequency culling enabled = true
+WifiConfigManager - PNO scan recency sorting enabled = true
+Dump of WifiConfigStore
+WifiConfigStore - Store File Begin ----
+Name: /data/misc/apexdata/com.android.wifi/WifiConfigStore.xml, File Id: 0, Credentials encrypted: false
+Name: /data/misc/apexdata/com.android.wifi/WifiConfigStoreSoftAp.xml, File Id: 1, Credentials encrypted: false
+Name: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStore.xml, File Id: 2, Credentials encrypted: false
+Name: /data/misc_ce/0/apexdata/com.android.wifi/WifiConfigStoreNetworkSuggestions.xml, File Id: 3, Credentials encrypted: false
+WifiConfigStore - Store Data Begin ----
+StoreData => Name: WifiCarrierInfoStoreManagerDataStores, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: ImsiPrivacyProtectionExemptionMap, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkList, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkList, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: MacAddressMap, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: Settings, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkSuggestionMap, File Id: 3, File Name: WifiConfigStoreNetworkSuggestions.xml
+StoreData => Name: PasspointConfigData, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: PasspointConfigData, File Id: 0, File Name: WifiConfigStore.xml
+StoreData => Name: OpenNetworkNotifierBlacklistConfigData, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: NetworkRequestMap, File Id: 2, File Name: WifiConfigStore.xml
+StoreData => Name: SoftAp, File Id: 1, File Name: WifiConfigStoreSoftAp.xml
+StoreData => Name: WakeupConfigStoreData, File Id: 2, File Name: WifiConfigStore.xml
+WifiConfigStore - Store Data End ----
+WifiCarrierInfoManager: 
+mImsiEncryptionInfoAvailable={}
+mImsiPrivacyProtectionExemptionMap={}
+mMergedCarrierNetworkOffloadMap={}
+mSubIdToSimInfoSparseArray={}
+mActiveSubInfos=null
+mCachedCarrierConfigPerSubId={}
+NonCarrierMergedNetworksStatusTracker - Log Begin ----
+mSubscriptionId=-1
+dumpTimeMs=22214843
+mDisableStartTimeMs=0
+mMinDisableDurationMs=0
+mMaxDisableDurationMs=0
+mTemporarilyDisabledNonCarrierMergedListAtStart=
+NonCarrierMergedNetworksStatusTracker - Log End ----
+
+Dump of PasspointManager
+PasspointManager - Providers Begin ---
+PasspointManager - Providers End ---
+PasspointManager - Next provider ID to be assigned 0
+Last sweep 6:09:57.072 ago.
+ANQPRequestManager - Begin ---
+ANQPRequestManager - End ---
+
+Chipset information :-----------------------------------------------
+FW Version is: null
+Driver Version is: null
+Supported Feature set: 0
+--------------------------------------------------------------------
+Bug dump 0
+system time = 10-20 16:24:25.477
+kernel time = 890.649
+reason = 7
+kernel log: 
+--------- beginning of kernel
+10-20 10:14:07.945     0     0 I         : Booting Linux on physical CPU 0x0000000000 [0x411fd090]
+
+system log: 
+
+--------------------------------------------------------------------
+Last Flush Time: {}
+--------------------------------------------------------------------
+No fates fetched for "Last failed connection fates"
+HAL provided zero fates for "Latest fates"
+No last mile log for "Last failed last-mile log"
+No last mile log for "Latest last-mile log"
+--------------------------------------------------------------------
+Dump of WifiConnectivityManager
+WifiConnectivityManager - Log Begin ----
+2026-10-20T10:14:25.721 - ScoredNetworkNominator constructed. mNetworkRecommendationsEnabled: false
+2026-10-20T10:14:25.739 - handleScreenStateChanged: screenOn=true
+2026-10-20T10:14:25.739 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=false wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T10:14:30.427 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T10:14:30.427 - Stopping WifiConnectivityManager
+2026-10-20T10:14:30.427 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T10:14:32.872 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T10:14:32.872 - Stopping WifiConnectivityManager
+2026-10-20T10:14:32.873 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T10:15:50.106 - handleScreenStateChanged: screenOn=false
+2026-10-20T10:15:50.106 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=false wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T10:16:50.579 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T10:16:50.580 - Stopping WifiConnectivityManager
+2026-10-20T10:16:50.580 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T10:16:52.371 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T10:16:52.371 - Stopping WifiConnectivityManager
+2026-10-20T10:16:52.371 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T10:18:28.561 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T10:18:28.561 - Stopping WifiConnectivityManager
+2026-10-20T10:18:28.562 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T10:18:30.326 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T10:18:30.326 - Stopping WifiConnectivityManager
+2026-10-20T10:18:30.326 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T13:43:05.657 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T13:43:05.657 - Stopping WifiConnectivityManager
+2026-10-20T13:43:05.657 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T13:43:07.337 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T13:43:07.337 - Stopping WifiConnectivityManager
+2026-10-20T13:43:07.337 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T13:44:48.528 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T13:44:48.528 - Stopping WifiConnectivityManager
+2026-10-20T13:44:48.528 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T13:44:50.597 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T13:44:50.597 - Stopping WifiConnectivityManager
+2026-10-20T13:44:50.599 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T13:46:19.481 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T13:46:19.481 - Stopping WifiConnectivityManager
+2026-10-20T13:46:19.481 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T13:46:21.307 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T13:46:21.307 - Stopping WifiConnectivityManager
+2026-10-20T13:46:21.307 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T13:47:25.485 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T13:47:25.485 - Stopping WifiConnectivityManager
+2026-10-20T13:47:25.485 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T13:47:27.474 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T13:47:27.475 - Stopping WifiConnectivityManager
+2026-10-20T13:47:27.476 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T13:47:56.520 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T13:47:56.520 - Stopping WifiConnectivityManager
+2026-10-20T13:47:56.520 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T13:47:58.287 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T13:47:58.287 - Stopping WifiConnectivityManager
+2026-10-20T13:47:58.287 - startConnectivityScan: screenOn=false wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T16:17:24.525 - handleScreenStateChanged: screenOn=true
+2026-10-20T16:17:24.525 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=false wifiEnabled=false mAutoJoinEnabled=false
+2026-10-20T16:17:24.957 - setTrustedConnectionAllowed: allowed=true
+2026-10-20T16:17:24.957 - Stopping WifiConnectivityManager
+2026-10-20T16:17:24.957 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=true
+2026-10-20T16:17:26.806 - setTrustedConnectionAllowed: allowed=false
+2026-10-20T16:17:26.806 - Stopping WifiConnectivityManager
+2026-10-20T16:17:26.806 - startConnectivityScan: screenOn=true wifiState=unknown scanImmediately=true wifiEnabled=false mAutoJoinEnabled=false
+WifiConnectivityManager - Log End ----
+WifiOpenNetworkNotifier: 
+mSettingEnabled true
+currentTime: 1792488265697
+mNotificationRepeatTime: 0
+mState: 0
+mBlocklistedSsids: {}
+Dump of WifiBlocklistMonitor
+WifiBlocklistMonitor - Bssid blocklist begin ----
+WifiBlocklistMonitor - Bssid blocklist end ----
+WifiBlocklistMonitor - Bssid blocklist logs begin ----
+WifiBlocklistMonitor - Bssid blocklist logs end ----
+Dump of WifiHealthMonitor
+WifiHealthMonitor - Log Begin ----
+System Info Stats
+
+currScanStats: last scan time: -1 APs found at 2G: 0 APs found above 2g: 0
+prevScanStats: last scan time: -1 APs found at 2G: 0 APs found above 2g: 0
+configured network connection stats
+networks with failure increase: 
+
+networks with failure drop: 
+
+networks with high failure without previous stats: 
+
+WifiHealthMonitor - Log End ----
+Dump of WifiScoreCard
+current SSID(s):
+ BW Estimation Stats
+2G
+ Tx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+ Rx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+5G
+ Tx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+ Rx
+ Count
+ 0 0 0 0 0
+ AvgKbps
+ 0 0 0 0 0
+ BwEst error
+ 0 0 0 0 0
+ L2 error
+ 0 0 0 0 0
+
+Dump of WakeupController
+USE_PLATFORM_WIFI_WAKE: true
+mWifiWakeupEnabled: false
+isOnboarded: false
+configStore hasBeenRead: true
+mIsActive: true
+mNumScansHandled: 0
+WakeupLock: 
+mNumScans: 0
+mIsInitialized: true
+Locked networks: 0
+Dump of WifiLastResortWatchdog
+WifiLastResortWatchdog - Log Begin ----
+WifiLastResortWatchdog - Log End ----
+Dump of AdaptiveConnectivityEnabledSettingObserver
+mAdaptiveConnectivityEnabled=true
+Dump of WifiGlobals
+mPollRssiIntervalMillis=-1
+mIpReachabilityDisconnectEnabled=true
+mIsBluetoothConnected=true
+mIsWpa3SaeUpgradeEnabled=true
+mIsWpa3SaeUpgradeOffloadEnabled=false
+mIsOweUpgradeEnabled=true
+mFlushAnqpCacheOnWifiToggleOffEvent=true
+mIsWpa3SaeH2eSupported=false
+mP2pDeviceNamePrefix=Android_
+mP2pDeviceNamePostfixNumDigits=-1
+mClientModeImplNumLogRecs=100
+mWifiInterfaceAddedSelfRecoveryEnabled=true
+Dump of SarManager
+isSarSupported: false
+isSarVoiceCallSupported: false
+isSarSoftApSupported: false
+
+
+Dump of LastCallerInfoManager
+ScanningEnabled: tid=3626 uid=1000 pid=3293 packageName=android toggleState=true
+
+Dump of LinkProbeManager
+LinkProbeManager - link probing supported by device: false
+LinkProbeManager - mLastLinkProbeTimestampMs: 0
+LinkProbeManager - mLastTxSuccessIncreaseTimestampMs: 0
+LinkProbeManager - mLastTxSuccessCount: 0
+LinkProbeManager - mLastScreenOnTimestampMs: 0
+LinkProbeManager - mTimedQuotaManager: TimedQuotaManager{mQuota=192, mPeriodMillis=86400000, mStartTimeMillis=17776, mLastPeriod=0, mConsumedQuota=0}

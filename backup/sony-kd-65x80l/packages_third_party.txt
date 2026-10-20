@@ -1,0 +1,5 @@
+package:com.alphainventor.filemanager
+package:com.google.android.youtube.tvkids
+package:org.videolan.vlc
+package:net.fptplay.ottbox
+package:com.oxootv.spagreen

@@ -1,21 +1,25 @@
 package com.gathin.tvhome;
 
 import android.accessibilityservice.AccessibilityService;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 
 /**
- * Sends the remote's Home button to this launcher on remotes that emit KEYCODE_ALL_APPS for Home
- * (Xiaomi sticks and boxes). Android TV 9 routes that key only to the system-image launcher, so once
- * the stock launcher is disabled the button does nothing. Every other key passes through untouched.
+ * Intercepts Home, TV/Input, and Settings keys, and redirects Google TV LauncherX
+ * to this launcher so LauncherX remains enabled in the background for Google Assistant.
  *
  * Enable over adb:
  *   settings put secure enabled_accessibility_services com.gathin.tvhome/.HomeKeyService
  *   settings put secure accessibility_enabled 1
  */
 public class HomeKeyService extends AccessibilityService {
+
+    private static final String ACTION_VIEW_INPUTS = "com.android.tv.action.VIEW_INPUTS";
+    private static final String LAUNCHERX_PKG = "com.google.android.apps.tv.launcherx";
+    private static final String SETUPWRAITH_PKG = "com.google.android.tungsten.setupwraith";
 
     /** Remote buttons that should open Settings (config.xml, settings_key_scancodes and settings_key_keycodes). */
     private int[] settingsScancodes = new int[0];
@@ -26,7 +30,6 @@ public class HomeKeyService extends AccessibilityService {
     protected void onServiceConnected() {
         super.onServiceConnected();
         settingsScancodes = getResources().getIntArray(R.array.settings_key_scancodes);
-        // Keycodes and the panel choice can also come from a theme; theme.sh restarts this service.
         Config config = Config.load(this);
         settingsKeycodes = config.settingsKeycodes;
         settingsPanel = config.settingsKeyPanel;
@@ -39,9 +42,14 @@ public class HomeKeyService extends AccessibilityService {
         return false;
     }
 
+    private void launchHome() {
+        Intent home = new Intent(this, MainActivity.class)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+        startActivity(home);
+    }
+
     @Override
     protected boolean onKeyEvent(KeyEvent event) {
-        // The stock launcher handled the remote's Settings button; with it disabled the button does nothing.
         if (isSettingsKey(event)) {
             if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) {
                 Intent open = settingsPanel ? new Intent(this, QuickSettingsActivity.class)
@@ -50,19 +58,35 @@ public class HomeKeyService extends AccessibilityService {
             }
             return true;
         }
-        if (event.getKeyCode() != KeyEvent.KEYCODE_ALL_APPS) return false;
-        if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) {
-            Intent home = new Intent(Intent.ACTION_MAIN)
-                    .addCategory(Intent.CATEGORY_HOME)
-                    .setPackage(getPackageName())
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-            startActivity(home);
+
+        if (event.getKeyCode() == KeyEvent.KEYCODE_TV) {
+            if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) {
+                try {
+                    startActivity(new Intent(ACTION_VIEW_INPUTS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                } catch (ActivityNotFoundException ignored) {
+                }
+            }
+            return true;
         }
-        return true;
+
+        if (event.getKeyCode() == KeyEvent.KEYCODE_ALL_APPS || event.getKeyCode() == KeyEvent.KEYCODE_HOME) {
+            if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) {
+                launchHome();
+            }
+            return true;
+        }
+
+        return false;
     }
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
+        if (event.getEventType() == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
+            CharSequence pkg = event.getPackageName();
+            if (pkg != null && (LAUNCHERX_PKG.contentEquals(pkg) || SETUPWRAITH_PKG.contentEquals(pkg))) {
+                launchHome();
+            }
+        }
     }
 
     @Override

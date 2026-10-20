@@ -1,0 +1,1 @@
+snapshots/sony-kd-65x80l-apple-dock-v1/scripts/rollback.sh
