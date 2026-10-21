@@ -33,3 +33,4 @@ com.vewd.core.integration.dia
 com.vewd.core.service
 tv.samba.ssm
 tv.samba.ssm.ui
+com.google.android.youtube.tvkids
