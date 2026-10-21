@@ -10,7 +10,16 @@
 
 set -euo pipefail
 
-TV_HOST="${TV_HOST:-192.168.1.192}"
+TV_HOST="${TV_HOST:-}"
+if [ -z "$TV_HOST" ]; then
+    for host in 192.168.1.191 192.168.1.192; do
+        if nc -z -w 1 "$host" 5555 2>/dev/null; then
+            TV_HOST="$host"
+            break
+        fi
+    done
+    TV_HOST="${TV_HOST:-192.168.1.191}"
+fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 PYTHON="$REPO_ROOT/tools/venv/bin/python"

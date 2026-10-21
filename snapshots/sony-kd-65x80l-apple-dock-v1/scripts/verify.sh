@@ -8,7 +8,16 @@ while [ ! -f "$CURRENT_DIR/tools/tv.py" ] && [ "$CURRENT_DIR" != "/" ]; do
 done
 REPO_DIR="$CURRENT_DIR"
 SNAPSHOT_DIR="$REPO_DIR/snapshots/sony-kd-65x80l-apple-dock-v1"
-TV_HOST="${TV_HOST:-192.168.1.192}"
+TV_HOST="${TV_HOST:-}"
+if [ -z "$TV_HOST" ]; then
+    for host in 192.168.1.191 192.168.1.192; do
+        if nc -z -w 1 "$host" 5555 2>/dev/null; then
+            TV_HOST="$host"
+            break
+        fi
+    done
+    TV_HOST="${TV_HOST:-192.168.1.191}"
+fi
 PY="$REPO_DIR/tools/venv/bin/python"
 
 export TV_HOST="$TV_HOST"

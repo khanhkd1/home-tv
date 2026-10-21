@@ -25,7 +25,12 @@
         "position": 2,
         "name": "SmartTube",
         "package": "org.smarttube.stable",
-        "version": "32.56"
+        "version": "32.68",
+        "in_app_update_enabled": true,
+        "permissions": {
+          "REQUEST_INSTALL_PACKAGES": "allow",
+          "MANAGE_EXTERNAL_STORAGE": "allow"
+        }
       },
       {
         "position": 3,

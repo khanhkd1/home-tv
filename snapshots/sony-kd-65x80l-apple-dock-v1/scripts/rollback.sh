@@ -10,7 +10,16 @@ while [ ! -f "$CURRENT_DIR/tools/tv.py" ] && [ "$CURRENT_DIR" != "/" ]; do
 done
 REPO_DIR="$CURRENT_DIR"
 SNAPSHOT_DIR="$REPO_DIR/snapshots/sony-kd-65x80l-apple-dock-v1"
-TV_HOST="${TV_HOST:-192.168.1.192}"
+TV_HOST="${TV_HOST:-}"
+if [ -z "$TV_HOST" ]; then
+    for host in 192.168.1.191 192.168.1.192; do
+        if nc -z -w 1 "$host" 5555 2>/dev/null; then
+            TV_HOST="$host"
+            break
+        fi
+    done
+    TV_HOST="${TV_HOST:-192.168.1.191}"
+fi
 TV_PORT="${TV_PORT:-5555}"
 PY="$REPO_DIR/tools/venv/bin/python"
 
@@ -48,15 +57,17 @@ else
 fi
 
 # 3. Verify or Install SmartTube
-echo "[3/8] Checking SmartTube..."
+echo "[3/9] Checking SmartTube..."
 SMARTTUBE_INSTALLED=$("$PY" "$REPO_DIR/tools/tv.py" "pm list packages | grep org.smarttube.stable || true" | tr -d '\r\n')
 if [ -z "$SMARTTUBE_INSTALLED" ]; then
     echo "  SmartTube not installed. Pushing and installing..."
-    "$PY" "$REPO_DIR/tools/b64push.py" "$SNAPSHOT_DIR/apps/SmartTube_v32.56_armeabi-v7a.apk" /data/local/tmp/smarttube.apk
+    "$PY" "$REPO_DIR/tools/b64push.py" "$SNAPSHOT_DIR/apps/SmartTube_v32.68_armeabi-v7a.apk" /data/local/tmp/smarttube.apk
     "$PY" "$REPO_DIR/tools/tv.py" "pm install -r /data/local/tmp/smarttube.apk && rm -f /data/local/tmp/smarttube.apk"
 else
     echo "  SmartTube is already installed."
 fi
+"$PY" "$REPO_DIR/tools/tv.py" "appops set org.smarttube.stable REQUEST_INSTALL_PACKAGES allow"
+"$PY" "$REPO_DIR/tools/tv.py" "appops set org.smarttube.stable MANAGE_EXTERNAL_STORAGE allow"
 
 # 4. Verify or Install personalDNSfilter
 echo "[4/8] Checking personalDNSfilter..."

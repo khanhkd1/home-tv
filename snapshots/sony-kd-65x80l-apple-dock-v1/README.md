@@ -10,7 +10,7 @@ Bản snapshot này lưu lại toàn bộ trạng thái hoàn chỉnh, ổn đ�
 | :--- | :--- |
 | **Giao diện chính (Launcher)** | **CleanYourTV** phong cách Apple TV 4K, bo góc kính mờ, ambient glow, nền đen tuyền |
 | **4 Ứng dụng thanh Dock** | **1. FPT Play** (`net.fptplay.ottbox`)<br>**2. SmartTube** (`org.smarttube.stable`)<br>**3. Phim4K** (`com.oxootv.spagreen`)<br>**4. Apple TV** (`com.apple.atve.sony.appletv`) |
-| **Ứng dụng YouTube mới** | **SmartTube v32.56** không quảng cáo, giao diện Leanback TV |
+| **Ứng dụng YouTube mới** | **SmartTube v32.68** không quảng cáo, giao diện Leanback TV, đã bật tự cập nhật trong app (`REQUEST_INSTALL_PACKAGES`) |
 | **Netflix** | **Đã vô hiệu hóa hoàn toàn** (`com.netflix.ninja`, `com.netflix.partner.ncm`) |
 | **Bloatware & Telemetry** | **35 gói rác & theo dõi đã tắt** (Samba TV, Sony telemetry, Eco Dashboard, Timers, Sony Album/Music, Living Decor, Vewd...) |
 | **Trợ lý Google (Mic remote)** | **Hoạt động hoàn hảo** (LauncherX chạy ngầm hỗ trợ session, HomeKeyService chuyển hướng phím Home mượt mà) |
@@ -24,7 +24,7 @@ Bản snapshot này lưu lại toàn bộ trạng thái hoàn chỉnh, ổn đ�
 Thư mục này hoạt động hoàn toàn độc lập và có thể khôi phục offline kể cả khi không có mạng:
 
 * `apps/CleanYourTV_v2.3_release.apk`: File APK CleanYourTV đã biên dịch kèm cấu hình 4 Dock app chuẩn.
-* `apps/SmartTube_v32.56_armeabi-v7a.apk`: File APK SmartTube chính thức đã xác thực MD5.
+* `apps/SmartTube_v32.68_armeabi-v7a.apk`: File APK SmartTube chính thức đã xác thực MD5.
 * `config/debug.keystore`: Keystore số ký ứng dụng cố định.
 * `config/disabled_packages.txt`: Danh sách đầy đủ 35 gói cần tắt.
 * `config/enabled_packages.txt`: Danh sách các gói hệ thống được giữ lại.
