@@ -68,5 +68,20 @@
       "rules_file": "snapshots/sony-kd-65x80l-apple-dock-v1/config/fptplay_adblock_hosts.txt"
     }
   },
+  "iptv_configuration": {
+    "app": "OwnTV",
+    "package": "tv.own.owntv",
+    "version": "5.2.0",
+    "status": "Active",
+    "playlist_url": "https://tanphat-vn-tv.tanphat-laser.workers.dev/",
+    "channels_count": 253,
+    "epg_url": "https://lichphatsong.io.vn/epg.xml",
+    "player_engine": "ExoPlayer / libmpv (1080p Full HD)"
+  },
+  "display_and_power": {
+    "screensaver_enabled": 0,
+    "stay_on_while_plugged_in": 7,
+    "sony_eco_auto_shutoff": "off"
+  },
   "debloated_packages_count": 36
 }

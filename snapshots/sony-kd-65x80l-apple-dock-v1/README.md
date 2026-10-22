@@ -16,6 +16,9 @@ Bản snapshot này lưu lại toàn bộ trạng thái hoàn chỉnh, ổn đ�
 | **Trợ lý Google (Mic remote)** | **Hoạt động hoàn hảo** (LauncherX chạy ngầm hỗ trợ session, HomeKeyService chuyển hướng phím Home mượt mà) |
 | **DNS chặn quảng cáo** | **AdGuard Private DNS** (`dns.adguard-dns.com` ở chế độ opportunistic) |
 | **Chặn quảng cáo FPT Play** | **personalDNSfilter** v1.50.61.5 chạy ngầm cục bộ (`tun0`), chặn sạch banner khởi động và pre-roll video ads |
+| **Truyền hình IPTV (253 kênh)** | **OwnTV v5.2.0** (`tv.own.owntv`) FOSS mã nguồn mở, playlist 253 kênh Việt Nam & Quốc tế, EPG đầy đủ, phát Full HD 1080p |
+| **Ứng dụng TiviMate** | **Đã gỡ bỏ hoàn toàn** (`ar.tvplayer.tv`) để giải phóng bộ nhớ (do yêu cầu trả phí bản quyền) |
+| **Màn hình chờ & Tự tắt (Eco)** | **Đã tắt hoàn toàn** (`screensaver_enabled=0`, `stay_on_while_plugged_in=7`, Sony Eco tắt TV sau đặt "Không bao giờ") |
 
 ---
 
@@ -96,4 +99,14 @@ cd /Users/khanhkd1/.gemini/antigravity/scratch/cleanyourtv
 ./tools/manage_dnsfilter.sh restart
 ./tools/manage_dnsfilter.sh push-rules
 ```
+
+---
+
+## 7. Ứng Dụng Truyền Hình IPTV (OwnTV v5.2.0) & Chế Độ Luôn Giữ Màn Hình
+
+Hệ thống đã tích hợp ứng dụng **OwnTV v5.2.0** mã nguồn mở với danh sách 253 kênh truyền hình Việt Nam, lịch phát sóng EPG tự động và thiết lập chống tắt màn hình chờ.
+
+Chi tiết cách thức cài đặt, nạp playlist, đồng bộ EPG và phím điều khiển remote được lưu trữ tại tài liệu:  
+👉 [docs/iptv-owntv.md](../../docs/iptv-owntv.md)
+
 
